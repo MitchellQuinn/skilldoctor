@@ -58,7 +58,8 @@ structured record. Treat `suggested_patch.md` as guidance only.
 
 Use these checks when confirming the tool:
 
-- `pip install -e .`
+- `python -m pip install -e ".[dev]"` for validation with tests
+- `python -m pip install -e .` for CLI-only validation
 - `skill-doctor audit --help`
 - `skill-doctor audit examples/bad-skill/SKILL.md --out runs/bad-skill`
 - the project test suite

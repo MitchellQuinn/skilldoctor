@@ -1,0 +1,25 @@
+{
+  "schema_version": "1.0",
+  "tool": "skill-doctor",
+  "tool_version": "0.1.0",
+  "started_at": "2026-06-24T13:03:10Z",
+  "completed_at": "2026-06-24T13:03:10Z",
+  "target_path": "C:\\Development\\agentic-skills\\skilldoctor\\skills\\skill-doctor\\SKILL.md",
+  "output_dir": "C:\\Development\\agentic-skills\\skilldoctor\\examples\\skilldoctor-self-audit",
+  "command": [
+    "skill-doctor",
+    "audit",
+    "skills/skill-doctor/SKILL.md",
+    "--out",
+    "examples/skilldoctor-self-audit"
+  ],
+  "diagnostics_count": 0,
+  "outputs": {
+    "diagnostics_jsonl": "C:\\Development\\agentic-skills\\skilldoctor\\examples\\skilldoctor-self-audit\\diagnostics.jsonl",
+    "skill_report": "C:\\Development\\agentic-skills\\skilldoctor\\examples\\skilldoctor-self-audit\\skill_report.md",
+    "remediation_tasks": "C:\\Development\\agentic-skills\\skilldoctor\\examples\\skilldoctor-self-audit\\remediation_tasks.md",
+    "suggested_patch": "C:\\Development\\agentic-skills\\skilldoctor\\examples\\skilldoctor-self-audit\\suggested_patch.md",
+    "run_manifest": "C:\\Development\\agentic-skills\\skilldoctor\\examples\\skilldoctor-self-audit\\run_manifest.json"
+  },
+  "validation_status": "Passed"
+}

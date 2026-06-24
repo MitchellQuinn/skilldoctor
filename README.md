@@ -11,10 +11,20 @@ an arbitrary repository tree.
 
 ## Quick Start
 
+SkillDoctor requires Python 3.10 or newer.
+
 ```bash
-pip install -e .
+python -m pip install -e .
 skill-doctor audit --help
 skill-doctor audit examples/bad-skill/SKILL.md --out runs/bad-skill
+```
+
+For development or validation runs that include the test suite, install the dev
+extra:
+
+```bash
+python -m pip install -e ".[dev]"
+pytest
 ```
 
 The audit command writes:
