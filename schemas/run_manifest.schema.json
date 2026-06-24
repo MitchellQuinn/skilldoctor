@@ -1,0 +1,73 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://skilldoctor.local/schemas/run_manifest.schema.json",
+  "title": "SkillDoctor Run Manifest",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "schema_version",
+    "tool",
+    "tool_version",
+    "started_at",
+    "completed_at",
+    "target_path",
+    "output_dir",
+    "command",
+    "diagnostics_count",
+    "outputs",
+    "validation_status"
+  ],
+  "properties": {
+    "schema_version": {
+      "type": "string"
+    },
+    "tool": {
+      "const": "skill-doctor"
+    },
+    "tool_version": {
+      "type": "string"
+    },
+    "started_at": {
+      "type": "string"
+    },
+    "completed_at": {
+      "type": "string"
+    },
+    "target_path": {
+      "type": "string"
+    },
+    "output_dir": {
+      "type": "string"
+    },
+    "command": {
+      "type": "array",
+      "items": { "type": "string" }
+    },
+    "diagnostics_count": {
+      "type": "integer",
+      "minimum": 0
+    },
+    "outputs": {
+      "type": "object",
+      "required": [
+        "diagnostics_jsonl",
+        "skill_report",
+        "remediation_tasks",
+        "suggested_patch",
+        "run_manifest"
+      ],
+      "additionalProperties": false,
+      "properties": {
+        "diagnostics_jsonl": { "type": "string" },
+        "skill_report": { "type": "string" },
+        "remediation_tasks": { "type": "string" },
+        "suggested_patch": { "type": "string" },
+        "run_manifest": { "type": "string" }
+      }
+    },
+    "validation_status": {
+      "type": "string",
+      "enum": ["Not Run", "Failed", "Passed", "Partially Verified", "Stale", "Not Applicable"]
+    }
+  }
+}
